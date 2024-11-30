@@ -1,0 +1,33 @@
+{
+  "name": "metapi",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "lint": "eslint . --ext .ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "outdir": "dist/",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "browserless": "^10.6.3",
+    "html-get": "^2.17.2",
+    "metascraper": "^5.45.25",
+    "metascraper-author": "^5.45.25",
+    "metascraper-date": "^5.45.25",
+    "metascraper-description": "^5.45.25",
+    "metascraper-image": "^5.45.25",
+    "metascraper-logo": "^5.45.25",
+    "metascraper-publisher": "^5.45.25",
+    "metascraper-title": "^5.45.25",
+    "metascraper-url": "^5.45.25",
+    "metascraper-x": "^5.45.25",
+    "metascraper-youtube": "^5.45.25",
+    "playwright": "^1.49.0",
+    "puppeteer": "^23.9.0"
+  }
+}
