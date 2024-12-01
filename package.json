@@ -4,18 +4,20 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "tsc && node dist/index.js",
+    "compile": "tsc -w",
+    "start:watch": "node --watch dist/index.js",
     "lint": "eslint . --ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "outdir": "dist/",
   "license": "MIT",
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "@types/node": "^22.10.1",
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "browserless": "^10.6.3",
-    "html-get": "^2.17.2",
+    "express": "^4.21.1",
     "metascraper": "^5.45.25",
     "metascraper-author": "^5.45.25",
     "metascraper-date": "^5.45.25",
@@ -28,6 +30,6 @@
     "metascraper-x": "^5.45.25",
     "metascraper-youtube": "^5.45.25",
     "playwright": "^1.49.0",
-    "puppeteer": "^23.9.0"
+    "zod": "^3.23.8"
   }
 }
