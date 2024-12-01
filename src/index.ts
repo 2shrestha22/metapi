@@ -18,8 +18,16 @@ app.get('/', async (req, res) => {
 
     return;
   }
-  const metadata = await fetchMetadata(validation.data.url);
-  res.send(metadata);
+
+  try {
+    const metadata = await fetchMetadata(validation.data.url);
+    res.send(metadata);
+  } catch (error) {
+    res.status(400)
+      .header({ "Content-Type": "application/json" })
+      .json({ error: `Failed to load ${validation.data.url}.` });
+  }
+
 });
 
 app.listen(3000);

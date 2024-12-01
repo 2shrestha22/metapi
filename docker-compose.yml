@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  metapi:
+    build: .
+    container_name: metapi
+    user: pwuser
+    ports:
+      - 3000:3000 # host:docker
+    ipc: host
+    security_opt:
+      - seccomp=./seccomp_profile.json
+    restart: on-failure
