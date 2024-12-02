@@ -20,7 +20,7 @@ app.get('/', async (req, res) => {
   }
 
   try {
-    const metadata = await fetchMetadata(validation.data.url);
+    const metadata = await fetchMetadata(decodeURI(validation.data.url));
     res.send(metadata);
   } catch (error) {
     res.status(400)
