@@ -20,7 +20,9 @@ app.get('/', async (req, res) => {
   }
 
   try {
-    const metadata = await fetchMetadata(decodeURI(validation.data.url));
+    const url = validation.data.url;
+    const userAgent = "Googlebot/2.1 (+http://www.google.com/bot.html)"
+    const metadata = await fetchMetadata(url, userAgent);
     res.send(metadata);
   } catch (error) {
     res.status(400)

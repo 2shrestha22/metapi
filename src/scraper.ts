@@ -23,9 +23,8 @@ const metascraper = metascraperFactory([
   metascraperUrl(),
 ]);
 
-const userAgent = "Googlebot/2.1 (+http://www.google.com/bot.html)";
 
-export async function fetchMetadata(url: string) {
+export async function fetchMetadata(url: string, userAgent?: string | undefined) {
   const browser = await chromium.launch();
   const context = await browser.newContext({ userAgent: userAgent })
   const page = await context.newPage();
